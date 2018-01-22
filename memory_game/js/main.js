@@ -23,7 +23,6 @@ var cards = [
 
 var inPlay = [];
 
-//Sets current session score to be 0
 
 var score = 0;
 var highscoreStore = window.localStorage.getItem('highscoreStore');
@@ -36,7 +35,6 @@ if(window.localStorage.getItem('highscoreStore') == null){
 	}
 
 
-//Check if both chosen cards are equal & if two cards were chosen
 
 function checkForMatch(){
 	if(inPlay.length === 2){
@@ -70,7 +68,7 @@ function flipCard() {
 	};
 
 
-//Board creation with redefining source, data ID, and event listening.
+//Board creation with redefining source, data ID, and event listening
 
 function createBoard(){
 	for(var i = 0; i < cards.length; i++) {
@@ -83,7 +81,6 @@ function createBoard(){
 }
 
 
-//Card position randomizer with choice exclusion
 
 function randomizer(cards) {
 	var curIndex = cards.length, tempV, tempIndex;
@@ -100,14 +97,13 @@ function randomizer(cards) {
 }
 
 
-//Randomizes cards on render, then prints board
 
 randomizer(cards);
 createBoard();
 
 
 
-//Button
+
 
 function resetter(){
 	inPlay.length = 0;
